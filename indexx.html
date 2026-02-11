@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maafin Aku Ya? ❤️</title>
+    <style>
+        body {
+            background-color: #ffe4e1;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(255, 105, 180, 0.3);
+            text-align: center;
+            max-width: 450px;
+            width: 90%;
+            border: 3px solid #ffb6c1;
+        }
+
+        h1 {
+            color: #ff1493;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .message {
+            color: #555;
+            line-height: 1.6;
+            font-size: 14px;
+            text-align: justify;
+            margin-bottom: 20px;
+            background: #fff0f5;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            height: 50px;
+            position: relative;
+        }
+
+        button {
+            padding: 10px 25px;
+            font-size: 16px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: 0.3s;
+            font-weight: bold;
+        }
+
+        #btnYa {
+            background-color: #ff69b4;
+            color: white;
+        }
+
+        #btnYa:hover {
+            background-color: #ff1493;
+            transform: scale(1.1);
+        }
+
+        #btnTidak {
+            background-color: #ddd;
+            color: #777;
+            position: absolute;
+            left: 55%; /* Posisi awal sebelah tombol Ya */
+        }
+
+        .emoji {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="emoji">🥺💖</div>
+    <h1>Maafin Aku Ya Sayang?</h1>
+    
+    <div class="message">
+        <strong>Sayangku, my princess, my bini, my sawit, my everyting</strong><br><br>
+        Aku tahu kamu lagi marah sama aku sekarang, dan aku nggak nyalahin kamu sama sekali. Mungkin aku emang sering bikin kamu kecewa tanpa sadar, entah karena aku kurang perhatian atau kata-kataku yang kadang nggak pas. Aku minta maaf banget dari hati yang paling dalam. <br><br>
+        Kamu adalah orang yang paling berharga buat aku, dan liat kamu sedih atau marah gara-gara aku bikin hatiku ikut sakit. Aku janji deh, mulai sekarang aku bakal lebih peka lagi sama perasaanmu. Kita kan <strong>pasangan plenger</strong>, saling jaga dan saling lengkapin.<br><br>
+        Aku nggak mau kita ribut-ribut gini terus, karena tanpa kamu, hari-hariku bakal sepi banget. Tolong maafin aku ya, cintaku? Besok pagi aku jemput dan kita ngobrol santai sambil makan-makan favoritmu, gimana? Aku sayang kamu lebih dari apa pun. Peluk erat dari jauh dulu. ❤️
+    </div>
+
+    <div class="buttons">
+        <button id="btnYa" onclick="berhasil()">Ya, dimaafin!</button>
+        <button id="btnTidak" onmouseover="lari()" onclick="lari()">Nggak!</button>
+    </div>
+</div>
+
+<script>
+    function lari() {
+        const btnTidak = document.getElementById('btnTidak');
+        
+        // Menghitung posisi acak
+        const x = Math.random() * (window.innerWidth - btnTidak.offsetWidth);
+        const y = Math.random() * (window.innerHeight - btnTidak.offsetHeight);
+        
+        // Memindahkan tombol ke posisi acak
+        btnTidak.style.position = 'fixed';
+        btnTidak.style.left = x + 'px';
+        btnTidak.style.top = y + 'px';
+    }
+
+    function berhasil() {
+        alert("Yaaay! Makasih sayangku! ❤️ Sampai ketemu besok pagi ya, aku jemput tepat waktu! I love you!");
+        // Kamu bisa mengarahkan ke chat WhatsApp setelah klik "Ya"
+        // window.location.href = "https://wa.me/nomorkamu?text=Iya+sayang,+aku+maafin+kok";
+    }
+</script>
+
+</body>
+</html>
